@@ -132,8 +132,7 @@ const Contact = () => {
 
       {/* footer */}
       <div className="mt-20">
-        <footer className="c-space pt-8
-         border-t border-white flex flex-col items-center gap-5">
+        <footer className="c-space pt-7 border-t border-white flex flex-col items-center gap-5">
           <div className="text-white-500 flex gap-2 text-sm">
             <p>Terms & Conditions</p>
             <p>|</p>
