@@ -1,9 +1,4 @@
 import logo from "./logo.png";
-import backend from "./backend.png";
-import web3 from "./web3.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
-import github from "./github.png";
 import whatsappIcon from"./whatsapp.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -23,6 +18,21 @@ import solidty from "./tech/solidty.png";
 import hardhat from "./tech/hardhat.png";
 import threejs from "./tech/threejs.svg";
 
+import grid1 from "./grid1.jpg";
+import grid2 from "./grid2.png";
+import grid3 from "./grid3.png";
+import grid4 from "./grid4.png";
+
+import linkedin from "./linkedin.png";
+import instagram from "./instagram.svg";
+import twitter from "./twitter.svg";
+import github from "./github.svg";
+
+import terminal from "./terminal.png"
+
+import copy from "./copy.svg";
+import tick from "./tick.svg";
+
 import  safetyplus from "./company/safetyplus.png";
 
 import station from "./station.png";
@@ -32,15 +42,21 @@ import template from "./template.png"
 
 export {
   logo,
-  backend,
-  web3,
-  mobile,
-  web,
   github,
   whatsappIcon,
   menu,
   close,
   css,
+  grid1,
+  grid2,
+  grid3,
+  grid4,
+  copy,
+  twitter,
+  instagram,
+  linkedin,
+  terminal,
+  tick,
   figma,
   git,
   html,

@@ -4,12 +4,16 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
+      fontFamily: {
+        generalsans: ['General Sans', 'sans-serif'],
+      },
       colors: {
         primary: "#000000",
         secondary: "#b7efc5",
         tertiary: "#081c15",
         "black-100": "#100d25",
-        "black-200": "#090325",
+        "black-200": "#0a0e0a",
+        "black-300":"#378B29",
         "white-100": "#f3f3f3",
       },
       boxShadow: {

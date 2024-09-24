@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";  
 import { navLinks } from "../constants";  
 import { logo, menu, close } from "../assets";  
-import CV from "../assets/cv/CVWambua.pdf"
+import CV from "../assets/cv/CVWambua.pdf";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -35,7 +35,10 @@ const Navbar = () => {
             <li
               key={link.id}
               className={`${active === link.title ? "text-white" : "text-secondary"} cursor-pointer hover:text-white text-[18px] font-medium`}
-              onClick={() => setActive(link.title)}
+              onClick={() => {
+                setActive(link.title);
+                window.scrollTo({ top: document.getElementById(link.id).offsetTop, behavior: 'smooth' });
+              }}
             >
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
@@ -72,6 +75,7 @@ const Navbar = () => {
                   onClick={() => {
                     setActive(link.title);
                     setToggle(false);
+                    window.scrollTo({ top: document.getElementById(link.id).offsetTop, behavior: 'smooth' });
                   }}
                 >
                   <a href={`#${link.id}`}>{link.title}</a>
@@ -96,4 +100,5 @@ const Navbar = () => {
 }
 
 export default Navbar;
+
 

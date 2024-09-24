@@ -1,8 +1,4 @@
 import {
-    mobile,
-    backend,
-    web3,
-    web,
     javascript,
     typescript,
     html,
@@ -36,26 +32,7 @@ import {
       title: "Contact",
     },
   ];
-  
-  export const services = [
-    {
-      title: "Web Developer",
-      icon: web,
-    },
-    {
-      title: "React Native Developer",
-      icon: mobile,
-    },
-    {
-      title: "Backend Developer",
-      icon: backend,
-    },
-    {
-      title: "Web3 Developer",
-      icon: web3,
-    },
-  ];
-  
+    
   export const technologies = [
     {
       name: "HTML 5",
