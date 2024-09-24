@@ -132,13 +132,14 @@ const Contact = () => {
 
       {/* footer */}
       <div className="mt-20">
-        <footer className="c-space pt-7 border-t border-white flex flex-col items-center gap-5">
-          <div className="text-white-500 flex gap-2">
+        <footer className="c-space pt-8
+         border-t border-white flex flex-col items-center gap-5">
+          <div className="text-white-500 flex gap-2 text-sm">
             <p>Terms & Conditions</p>
             <p>|</p>
-            <p>Privacy Policy</p>
+            <p className="text-blue-500">Privacy Policy</p>
           </div>
-          <div className="flex gap-20 justify-center">
+          <div className="flex gap-5 justify-center flex-wrap">
             <div className="social-icon">
               <a href="https://github.com/Dennis-DW" target="_blank" rel="noopener noreferrer">
                 <img src={github} alt="github" className="w-8 h-8" />

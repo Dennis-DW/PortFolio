@@ -71,7 +71,7 @@ const About = () => {
                     showGraticules
                     globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
                     bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-                    labelsData={[{ lat: 40, lng: -100, text: 'Rjieka, Croatia', color: 'white', size: 15 }]}
+                    labelsData={[{ lat: 40, lng: -100, text: 'Dennis, Kenya', color: 'white', size: 15 }]}
                   />
                 </div>
                 <div>
@@ -83,11 +83,9 @@ const About = () => {
                 </div>
               </div>
             </div>
-
             <div className="xl:col-span-2 xl:row-span-3">
               <div className="grid-container">
                 <img src={grid3} alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
-
                 <div>
                   <p className="grid-headtext">My Passion for Coding</p>
                   <p className="grid-subtext">
@@ -97,7 +95,6 @@ const About = () => {
                 </div>
               </div>
             </div>
-
             <div className="xl:col-span-1 xl:row-span-2">
               <div className="grid-container">
                 <img
@@ -105,7 +102,6 @@ const About = () => {
                   alt="grid-4"
                   className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
                 />
-
                 <div className="space-y-2">
                   <p className="grid-subtext text-center">Contact me</p>
                   <div className="copy-container" onClick={handleCopy}>
