@@ -134,7 +134,7 @@ import {
     {
       name: "StationScout",
       description:
-        "StationScout is a mobile application developed as a final year project, designed to help users find nearby gas stations quickly and efficiently. The app utilizes modern technologies and APIs to provide real-time location-based information and features a user-friendly interface.",
+        "StationScout helps users find nearby gas stations quickly using modern technologies, APIs, and a user-friendly interface.",
       tags: [
         {
           name: "react",
@@ -155,7 +155,7 @@ import {
     {
       name: "Ethereum Sender",
       description:
-        "A Web3.0, React, and Vite project connected to the blockchain, featuring MetaMask pairing, interaction with smart contracts, and the ability to send Ethereum through the blockchain network.",
+        "Web3.0 React and Vite project with MetaMask, smart contracts, and Ethereum transactions on the blockchain.",
       tags: [
         {
           name: "react",
@@ -176,7 +176,7 @@ import {
     {
       name: "Kejani Homes",
       description:
-        "Kejani Homes is a powerful web application built using the Refine framework, enabling full CRUD (Create, Read, Update, Delete) functionalities. It is a full-stack MERN (MongoDB, Express.js, React.js, Node.js) web app designed to streamline real estate operations and enhance user experiences.",
+        "Kejani Homes is a MERN web app using Refine for full CRUD, streamlining real estate operations.",
       tags: [
         {
           name: "refine",
@@ -197,7 +197,7 @@ import {
     {
       name: "E-commerce Template",
       description:
-        "A responsive, SEO-optimized e-commerce landing page using Tailwind CSS, React, and Vite. It features a modern design with fast load times, product showcases, customer testimonials, and seamless navigation.",
+        "A responsive e-commerce landing page using Tailwind CSS, React, and Vite with fast load times and modern design.",
       tags: [
         {
           name: "vite",
