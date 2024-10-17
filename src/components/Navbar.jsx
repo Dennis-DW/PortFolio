@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";  
 import { navLinks } from "../constants";  
 import { logo, menu, close } from "../assets";  
-import CV from "../assets/cv/CVWambua.pdf";
+import CV from "../assets/cv/WambuaResume.pdf";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
