@@ -11,13 +11,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-2 fixed top-10 z-20  overflow-hidden  md:backdrop-blur-md rounded-full md:-left-32`}
+      className={`${styles.paddingX} w-full flex items-center py-2 fixed top-10 z-20  md:backdrop-blur-md rounded-full md:-left-32`}
       style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
-          className="flex items-center gap-2  md:ml-36"
+          className="flex items-center gap-2 md:ml-36"
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
@@ -34,8 +34,7 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <li
               key={link.id}
-              className={`${active === link.title ? "text-white" : "text-secondary"
-                } cursor-pointer hover:text-white text-[18px] font-medium`}
+              className={`${active === link.title ? "text-white" : "text-secondary"} cursor-pointer hover:text-white text-[18px] font-medium`}
               onClick={() => {
                 setActive(link.title);
                 const element = document.getElementById(link.id);
@@ -53,8 +52,8 @@ const Navbar = () => {
           <li>
             <a
               href={CV}
-              download="Dennis_Wambua_Kioko_CV.pdf"
-              className="text-black bg-white hover:bg-gray-200 py-2 px-4 rounded-full text-[18px] font-medium"
+              download="Dennis_Wambua_Resume.pdf"
+              className="text-black bg-white hover:bg-blue-400 py-2 px-4 rounded-full text-[18px] font-medium"
             >
               Download CV
             </a>
@@ -73,15 +72,13 @@ const Navbar = () => {
 
           {/* Mobile Menu */}
           <div
-            className={`${toggle ? "flex" : "hidden"
-              } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            className={`${toggle ? "flex" : "hidden"} p-6 black-gradient absolute top-20 right-10 mx-4 my-2 min-w-[140px] z-10 rounded-xl sm:hidden`}
           >
             <ul className="list-none flex flex-col gap-4">
               {navLinks.map((link) => (
                 <li
                   key={link.id}
-                  className={`${active === link.title ? "text-white" : "text-secondary"
-                    } font-medium cursor-pointer hover:text-white text-[15px]`}
+                  className={`${active === link.title ? "text-black-300" : "text-tertiary"} font-medium cursor-pointer hover:text-blue-200 text-[15px]`}
                   onClick={() => {
                     setActive(link.title);
                     setToggle(false);
@@ -100,8 +97,8 @@ const Navbar = () => {
               <li>
                 <a
                   href={CV}
-                  download="Dennis_Wambua_Kioko_CV.pdf"
-                  className="text-white bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded-full text-[15px] font-medium"
+                  download="Dennis_Wambua_Resume.pdf"
+                  className="text-black bg-white hover:bg-blue-400 py-2 px-4 rounded-full text-[18px] font-medium"
                 >
                   Download CV
                 </a>
