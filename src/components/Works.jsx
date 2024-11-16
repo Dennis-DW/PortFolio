@@ -70,7 +70,7 @@ const Works = () => {
       <div className='w-full flex justify-center'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[18px] max-w-3xl leading-[30px]'
+          className='mt-3 text-black-200 text-[18px] max-w-3xl leading-[30px]'
         >
           I engage in a diverse range of projects that blend technology and creativity. From developing mobile applications with React Native to crafting interactive 3D visuals using Three.js, my work focuses on enhancing user experiences and solving complex problems. I create robust web solutions involving smart contracts for web3 applications and design engaging e-commerce website templates with Tailwind CSS and Vite. My projects also include creating dynamic petrol station finders and integrating blockchain technologies. Each initiative is driven by a passion for innovation, aiming to deliver impactful and user-centric solutions across various digital platforms.
         </motion.p>

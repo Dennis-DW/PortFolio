@@ -8,15 +8,15 @@ module.exports = {
         generalsans: ['General Sans', 'sans-serif'],
       },
       colors: {
-        primary: "#DCE4C9", // white
-        secondary: "#1A1A19", // light gray
-        tertiary: "#F2F2F2", // gray
-        'custom-green-light': '#bfbfbf', // darker gray
-        'custom-green-dark': '#a6a6a6', // even darker gray
-        "black-100": "#8c8c8c", // dark gray
-        "black-200": "#737373", // darker gray
-        "black-300": "#595959", // even darker gray
-        "white-100": "#404040", // very dark gray
+        primary: "000000", 
+        secondary: "#4A4947", 
+        tertiary: "#F2F2F2", 
+        'custom-green-light': '#bfbfbf', 
+        'custom-green-dark': '#a6a6a6',
+        "black-100": "#8c8c8c",
+        "black-200": "#737373", 
+        "black-300": "#595959", 
+        "white-100": "#404040",
       },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",
