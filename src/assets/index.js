@@ -23,6 +23,7 @@ import grid2 from "./grid2.png";
 import grid3 from "./grid3.png";
 import grid4 from "./grid4.png";
 
+
 import linkedin from "./linkedin.png";
 import instagram from "./instagram.svg";
 import twitter from "./twitter.svg";

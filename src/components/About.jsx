@@ -60,7 +60,7 @@ const About = () => {
             </div>
 
             <div className="col-span-1 xl:row-span-4">
-              <div className="grid-container">
+              <div className="grid-container1">
                 <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
                   <Globe
                     height={326}
@@ -77,7 +77,7 @@ const About = () => {
                 <div>
                   <p className="grid-headtext">I am highly adaptable with communication across different time zones and locations.</p>
                   <p className="grid-subtext">I&apos;m based in Nairobi, Kenya and open to remote work worldwide.</p>
-                  <Link to="contact" smooth={true} duration={500}> {/* Smooth scrolling to contact section */}
+                  <Link to="contact" smooth={true} duration={500}> 
                     <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
                   </Link>
                 </div>
@@ -96,7 +96,7 @@ const About = () => {
               </div>
             </div>
             <div className="xl:col-span-1 xl:row-span-2">
-              <div className="grid-container">
+              <div className="grid-container1">
                 <img
                   src={grid4}
                   alt="grid-4"
@@ -106,7 +106,7 @@ const About = () => {
                   <p className="grid-subtext text-center">Contact me</p>
                   <div className="copy-container" onClick={handleCopy}>
                     <img src={hasCopied ? tick : copy} alt="copy" />
-                    <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">denny012dw@gmail.com</p>
+                    <p className="lg:text-xl md:text-xl font-medium text-gray_gradient text-white">denny012dw@gmail.com</p>
                   </div>
                 </div>
               </div>

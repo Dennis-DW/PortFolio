@@ -54,7 +54,7 @@ const Contact = () => {
       <div className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className='flex-[0.75] bg-[#111d13] p-8 rounded-2xl'
+          className='flex-[0.75] bg-white-100 p-8 rounded-2xl'
         >
           <p className={styles.sectionSubText}>Engage Me</p>
           <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -65,14 +65,14 @@ const Contact = () => {
             className='mt-12 flex flex-col gap-8'
           >
             <label className='flex flex-col'>
-              <span className='text-white font-medium mb-4'>Your Name</span>
+              <span className='text-white- font-medium mb-4'>Your Name</span>
               <input
                 type='text'
                 name='name'
                 value={form.name}
                 onChange={handleChange}
                 placeholder="What's your name?"
-                className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+                className='bg-tertiary py-4 px-6 placeholder:text-black-200 text-white rounded-lg outline-none border-none font-medium'
               />
             </label>
             <label className='flex flex-col'>
@@ -83,7 +83,7 @@ const Contact = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="What's your email?"
-                className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+                className='bg-tertiary py-4 px-6 placeholder:text-black-200 text-white rounded-lg outline-none border-none font-medium'
               />
             </label>
             <label className='flex flex-col'>
@@ -94,11 +94,11 @@ const Contact = () => {
                 value={form.message}
                 onChange={handleChange}
                 placeholder="What do you want to communicate?"
-                className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+                className='bg-tertiary py-4 px-6 placeholder:text-black-200 text-white rounded-lg outline-none border-none font-medium'
               />
             </label>
             <button
-              className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl hover:bg-[#020202] transition duration-300 ease-in-out transform hover:scale-105'
+              className='bg-tertiary py-3 px-8 outline-none w-fit text-secondary font-bold shadow-md shadow-primary rounded-xl hover:bg-[#020202] transition duration-300 ease-in-out transform hover:scale-105'
               type='submit'
             >
               {loading ? 'Sending...' : 'Send'}
@@ -132,8 +132,8 @@ const Contact = () => {
 
       {/* footer */}
       <div className="mt-20">
-        <footer className="c-space pt-7 border-t border-white flex flex-col items-center gap-5">
-          <div className="text-white-500 flex gap-2 text-sm">
+        <footer className="c-space pt-7 border-t border-white-100 border-double flex flex-col items-center gap-5">
+          <div className="text-white-100 flex gap-2 text-sm">
             <p>Terms & Conditions</p>
             <p>|</p>
             <p className="text-blue-500">Privacy Policy</p>
@@ -141,29 +141,30 @@ const Contact = () => {
           <div className="flex gap-5 justify-center flex-wrap">
             <div className="social-icon">
               <a href="https://github.com/Dennis-DW" target="_blank" rel="noopener noreferrer">
-                <img src={github} alt="github" className="w-8 h-8" />
+                <img src={github} alt="github" className="w-8 h-8 filter brightness-0 invert" />
               </a>
             </div>
             <div className="social-icon">
               <a href="https://x.com/Dw_denn" target="_blank" rel="noopener noreferrer">
-                <img src={twitter} alt="twitter" className="w-8 h-8" />
+                <img src={twitter} alt="twitter" className="w-8 h-8 filter brightness-0 invert" />
               </a>
             </div>
             <div className="social-icon">
               <a href="https://www.instagram.com/denny_s_dw/?next=%2F" target="_blank" rel="noopener noreferrer">
-                <img src={instagram} alt="instagram" className="w-8 h-8" />
+                <img src={instagram} alt="instagram" className="w-8 h-8 filter brightness-0 invert" />
               </a>
             </div>
             <div className="social-icon">
               <a href="https://www.linkedin.com/in/dennis-wambua-321a47252/" target="_blank" rel="noopener noreferrer">
-                <img src={linkedin} alt="linkedin" className="w-8 h-8" />
+                <img src={linkedin} alt="linkedin" className="w-8 h-8 filter brightness-0 invert" />
               </a>
             </div>
           </div>
 
-          <p className="text-white-500">© 2024 Dennis Wambua. All rights reserved.</p>
+          <p className="text-black-100">© 2024 Dennis Wambua. All rights reserved.</p>
         </footer>
       </div>
+
     </>
   );
 };

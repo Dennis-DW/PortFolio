@@ -9,12 +9,12 @@ import { textVariant } from '../utils/motion'
 
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
-    contentStyle={{ background: "#081c15", color: "#ebebeb" }}
-    contentArrowStyle={{ borderRight: "7px solid #b7efc5 !important" }} 
-    date={experience.date}
+  contentStyle={{ background: "#ffffff", color: "#000000" }}
+  contentArrowStyle={{ borderRight: "7px solid #ffffff" }}
+    date={<span style={{ color: 'black' }}>{experience.date}</span>}
     iconStyle={{ background: experience.iconBg }}
     icon={
-      <div className='flex justify-center items-center w-full h-full 'style={{ backgroundColor: '#b7efc5', borderRadius: '50%'}} >
+      <div className='flex justify-center items-center w-full h-full' style={{ backgroundColor: '#ffffff', borderRadius: '50%' }}>
         <img
           src={experience.icon}
           alt={experience.company_name}
@@ -24,15 +24,15 @@ const ExperienceCard = ({ experience }) => (
     }
   >
     <div>
-      <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
-      <p className='text-secondary text-[16px] font-semibold' style={{ margin: 0 }}>{experience.company_name}</p>
+    <h3 className='text-black text-[24px] font-bold'>{experience.title}</h3>
+    <p className='text-black text-[16px] font-semibold' style={{ margin: 0 }}>{experience.company_name}</p>
     </div>
     <ul className='mt-5 list-disc ml-5 space-y-2'>
       {experience.points.map((point, index) => (
-        <li
-          key={`experience-point-${index}`}
-          className='text-white-100 text-[14px] pl-1 tracking-wider'
-        >
+         <li
+         key={`experience-point-${index}`}
+         className='text-black text-[14px] pl-1 tracking-wider'
+       >
           {point}
         </li>
       ))}
@@ -59,4 +59,3 @@ const Experience = () => {
 }
 
 export default SectionWrapper(Experience, "work")
-
