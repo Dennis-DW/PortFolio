@@ -48,6 +48,9 @@
   @apply w-full h-full border border-[#1f1f1e] bg-black bg-opacity-85 rounded-r-3xl sm:p-7 p-4 flex flex-col gap-5;
 }
 
+.grid-container2 {
+  @apply w-full h-full border border-[#1f1f1e] bg-black bg-opacity-85 sm:p-7 p-4 flex flex-col gap-5;
+}
 
 .grid-headtext {
   @apply text-xl font-semibold mb-2 text-white font-generalsans;
