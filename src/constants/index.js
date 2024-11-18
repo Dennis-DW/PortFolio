@@ -114,14 +114,14 @@ import {
       testimonial:
         "Dennis developed an outstanding mobile application for his final course project, exceeding expectations with his dedication, creativity, and technical skills..",
       name: "Waphuka",
-      designation: "COO",
+      designation: "CEO",
       company: "Zao Tech",
       image:
         "https://img.freepik.com/premium-photo/young-mans-portrait-digital-simplicity_96461-12697.jpg?w=740",
     },
     {
       testimonial:
-        "Collaborated with Dennis on projects like Morphosis and Sprs; his technical expertise and problem-solving skills were invaluable..",
+        "Collaborated with Dennis on projects like Morphosis and SPRBS; his technical expertise and problem-solving skills were invaluable..",
       name: "Carlos",
       designation: "Freelancer",
       company: "Sowerved",
