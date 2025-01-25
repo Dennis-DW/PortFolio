@@ -1,11 +1,11 @@
 import React from 'react';
-import { styles } from '../styles';
+import { styles } from '../../styles';
 import { motion } from "framer-motion";
-import heroImage from "../assets/hero.png";
+import heroImage from "../../assets/hero.png";
 
 const Hero = () => {
   return (
-    <section className='relative w-full h-screen mx-auto flex items-center justify-center'>
+    <section className='relative w-full h-screen mx-auto flex items-center justify-center '>
       <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-5`}>
         {/* Content Wrapper */}
         <div className='flex flex-col md:flex-row w-full justify-between items-center gap-5'>

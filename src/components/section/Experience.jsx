@@ -2,16 +2,16 @@ import React from 'react'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
 import { motion } from "framer-motion"
 import "react-vertical-timeline-component/style.min.css"
-import { styles } from "../styles"
-import { experiences } from '../constants'
-import { SectionWrapper } from '../hoc'
-import { textVariant } from '../utils/motion'
+import { styles } from "../../styles"
+import { experiences } from '../../constants'
+import { SectionWrapper } from '../../hoc'
+import { textVariant } from '../../utils/motion'
 
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
   contentStyle={{ background: "#ffffff", color: "#000000" }}
   contentArrowStyle={{ borderRight: "7px solid #ffffff" }}
-    date={<span style={{ color: '#ffffff' }}>{experience.date}</span>}
+    date={<span style={{ color: '#404040' }}>{experience.date}</span>}
     iconStyle={{ background: experience.iconBg }}
     icon={
       <div className='flex justify-center items-center w-full h-full' style={{ backgroundColor: '#ffffff', borderRadius: '50%' }}>

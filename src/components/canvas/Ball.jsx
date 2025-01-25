@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import PropTypes from 'prop-types';
 import { Canvas } from '@react-three/fiber';
 import { Decal, Float, OrbitControls, Preload, useTexture } from '@react-three/drei';
-import CanvasLoader from "../Loader"; 
+import CanvasLoader from "../ui/Loader"; 
 import * as THREE from 'three'; 
 
 // Define a functional component to render the ball

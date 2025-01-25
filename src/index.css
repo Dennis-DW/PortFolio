@@ -41,23 +41,23 @@
 
 /* about section */
 .grid-container {
-  @apply w-full h-full border border-[#1f1f1e] bg-black bg-opacity-80 rounded-s-3xl sm:p-7 p-4 flex flex-col gap-5;
+  @apply w-full h-full border border-[#1f1f1e] rounded-s-3xl sm:p-7 p-4 flex flex-col gap-5;
 }
 
 .grid-container1 {
-  @apply w-full h-full border border-[#1f1f1e] bg-black bg-opacity-85 rounded-r-3xl sm:p-7 p-4 flex flex-col gap-5;
+  @apply w-full h-full border border-[#1f1f1e] rounded-r-3xl sm:p-7 p-4 flex flex-col gap-5;
 }
 
 .grid-container2 {
-  @apply w-full h-full border border-[#1f1f1e] bg-black bg-opacity-85 sm:p-7 p-4 flex flex-col gap-5;
+  @apply w-full h-full border border-[#1f1f1e] sm:p-7 p-4 flex flex-col gap-5;
 }
 
 .grid-headtext {
-  @apply text-xl font-semibold mb-2 text-white font-generalsans;
+  @apply text-xl font-semibold mb-2 text-[#8c8c8c] font-generalsans;
 }
 
 .grid-subtext {
-  @apply text-[#E1F0DA] font-extralight text-sm;
+  @apply text-[#737373] font-extralight text-sm;
 }
 
 .copy-container {

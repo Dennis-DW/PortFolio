@@ -1,11 +1,11 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
-import { styles } from '../styles';
-import { EarthCanvas } from './canvas';
-import { SectionWrapper } from '../hoc';
-import { slideIn } from '../utils/motion';
-import { whatsappIcon, instagram, github, twitter, linkedin } from '../assets';
+import { styles } from '../../styles';
+import { EarthCanvas } from '../canvas';
+import { SectionWrapper } from '../../hoc';
+import { slideIn } from '../../utils/motion';
+import { whatsappIcon, instagram, github, twitter, linkedin } from '../../assets';
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -72,7 +72,7 @@ const Contact = () => {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="What's your name?"
-                className='bg-tertiary py-4 px-6 placeholder:text-black-200 text-white rounded-lg outline-none border-none font-medium'
+                className='bg-tertiary py-4 px-6 placeholder:text-black-200 text-black rounded-lg outline-none border-none font-medium'
               />
             </label>
             <label className='flex flex-col'>
@@ -83,7 +83,7 @@ const Contact = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="What's your email?"
-                className='bg-tertiary py-4 px-6 placeholder:text-black-200 text-white rounded-lg outline-none border-none font-medium'
+                className='bg-tertiary py-4 px-6 placeholder:text-black-200 text-black rounded-lg outline-none border-none font-medium'
               />
             </label>
             <label className='flex flex-col'>
@@ -94,7 +94,7 @@ const Contact = () => {
                 value={form.message}
                 onChange={handleChange}
                 placeholder="What do you want to communicate?"
-                className='bg-tertiary py-4 px-6 placeholder:text-black-200 text-white rounded-lg outline-none border-none font-medium'
+                className='bg-tertiary py-4 px-6 placeholder:text-black-200 text-black rounded-lg outline-none border-none font-medium'
               />
             </label>
             <button
@@ -162,7 +162,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <p className="text-black-100">© 2024 Dennis Wambua. All rights reserved.</p>
+          <p className="text-black-100">© 2025 Dennis Wambua. All rights reserved.</p>
         </footer>
       </div>
 
