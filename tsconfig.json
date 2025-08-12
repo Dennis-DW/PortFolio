@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+      "target": "esnext", // Specify ECMAScript target version
+      "lib": ["dom", "dom.iterable", "esnext"], // Include libraries for DOM and ES features
+      "baseUrl": ".", // Base directory for resolving non-relative module names
+      "paths": {
+        "@components/*": ["./components/*"] // Alias for components directory
+      },
+      "jsx": "react-jsx", // Enable JSX support for React
+      "module": "esnext", // Specify module code generation
+      "moduleResolution": "node", // Resolve modules using Node.js-style resolution
+      "strict": true, // Enable all strict type-checking options
+      "esModuleInterop": true, // Enable compatibility with CommonJS modules
+      "skipLibCheck": true, // Skip type checking of declaration files
+      "forceConsistentCasingInFileNames": true, // Ensure consistent casing in file names
+      "resolveJsonModule": true, // Allow importing JSON files
+      "allowSyntheticDefaultImports": true, // Allow default imports from modules without default exports
+      "noEmit": true, // Disable emitting compiled files
+      "isolatedModules": true, // Ensure each file can be safely transpiled without relying on other files
+      "types": ["node"] // Include type definitions for Node.js
+    },
+    "include": ["src"], // Include the source directory
+    "exclude": ["node_modules", "dist"] // Exclude unnecessary directories
+  }

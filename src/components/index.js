@@ -10,6 +10,10 @@ import Contact from './section/Contact';
 import {AnimatedTestimonials} from './ui/animated-testimonials'
 import {BentoGrid } from './ui/bento-grid'
 import {BentoGridItem} from './ui/bento-grid'
+import Footer from './section/Footer'
+import Writter from './ui/typewriter-demo'
+import Preview from './ui/parallax-floating-demo';
+import {HeroStart} from './ui/hero-start'
 
 export {
   Hero,
@@ -25,5 +29,9 @@ export {
   StarsCanvas,
   AnimatedTestimonials,
   BentoGrid,
-  BentoGridItem 
+  BentoGridItem,
+  Footer,
+  Writter,
+  Preview,
+  HeroStart
 }

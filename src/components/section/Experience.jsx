@@ -1,61 +1,97 @@
-import React from 'react'
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
-import { motion } from "framer-motion"
-import "react-vertical-timeline-component/style.min.css"
-import { styles } from "../../styles"
-import { experiences } from '../../constants'
-import { SectionWrapper } from '../../hoc'
-import { textVariant } from '../../utils/motion'
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { Timeline } from "../ui/timeline";
+import { textVariant } from "../../utils/motion";
+import { SectionWrapper } from "../../hoc";
+import { styles } from "../../styles";
 
-const ExperienceCard = ({ experience }) => (
-  <VerticalTimelineElement
-  contentStyle={{ background: "#ffffff", color: "#000000" }}
-  contentArrowStyle={{ borderRight: "7px solid #ffffff" }}
-    date={<span style={{ color: '#404040' }}>{experience.date}</span>}
-    iconStyle={{ background: experience.iconBg }}
-    icon={
-      <div className='flex justify-center items-center w-full h-full' style={{ backgroundColor: '#ffffff', borderRadius: '50%' }}>
-        <img
-          src={experience.icon}
-          alt={experience.company_name}
-          className='w-[60%] h-[60%] object-contain'
-        />
-      </div>
-    }
-  >
-    <div>
-    <h3 className='text-black text-[24px] font-bold'>{experience.title}</h3>
-    <p className='text-black text-[16px] font-semibold' style={{ margin: 0 }}>{experience.company_name}</p>
-    </div>
-    <ul className='mt-5 list-disc ml-5 space-y-2'>
-      {experience.points.map((point, index) => (
-         <li
-         key={`experience-point-${index}`}
-         className='text-black text-[14px] pl-1 tracking-wider'
-       >
-          {point}
-        </li>
-      ))}
-    </ul>
-  </VerticalTimelineElement>
-)
+// Import images
+import aibbcSite from "../../assets/aibbc-site.png";
+import aibbcEvent from "../../assets/aibbc-event.jpeg";
+import aiNexusDashboard from "../../assets/ainexus-dashboard.png";
+import aiNexusTrading from "../../assets/ainexus-trading.png";
+import safetyPlusDatabase from "../../assets/safetyplus-database.jpeg";
+import safetyPlusAudit from "../../assets/safetyplus-audit.jpeg";
 
-const Experience = () => {
+const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>My efforts up to now</p>
         <h2 className={styles.sectionHeadText}>Work Experience.</h2>
       </motion.div>
-      <div className='mt-20 flex flex-col'>
-        <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
-          ))}
-        </VerticalTimeline>
-      </div>
+      <Work />
     </>
-  )
+  );
+};
+
+export function Work() {
+  const data = [
+    {
+      title: "May – Jun 2025",
+      content: (
+        <div>
+          <p className="mb-4 text-sm md:text-base text-neutral-800 dark:text-neutral-200 font-semibold">
+            Web Developer – AI Nexus Marketplace (Hackathon Submission)
+          </p>
+          <ul className="list-disc pl-5 space-y-2 text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
+            <li>Built and submitted a decentralized AI trading platform for Bolt AI’s global hackathon.</li>
+            <li>Stack included React, TypeScript, Node.js, Express, MongoDB, and Tailwind CSS.</li>
+            <li>Integrated real-time analytics, secure smart contracts (Solidity), and wallet connectivity.</li>
+          </ul>
+          <div className="grid grid-cols-2 gap-4 mt-4">
+            <img src={aiNexusDashboard} alt="AI Nexus Dashboard" className="h-20 w-full rounded-lg object-cover shadow-md md:h-44 lg:h-60" />
+            <img src={aiNexusTrading} alt="AI Nexus Trading View" className="h-20 w-full rounded-lg object-cover shadow-md md:h-44 lg:h-60" />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Jan – July 2024",
+      content: (
+        <div>
+          <p className="mb-4 text-sm md:text-base text-neutral-800 dark:text-neutral-200 font-semibold">
+            Full Stack Developer – Africa International Biotechnology and Biomedical Conference (AIBBC)
+          </p>
+          <ul className="list-disc pl-5 space-y-2 text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
+            <li>Developed and maintained the official AIBBC website using WordPress with custom frontend enhancements.</li>
+            <li>Integrated responsive layouts, accessibility improvements, APIs, and third-party tools for event management.</li>
+            <li>Ongoing updates, performance optimization, and security maintenance.</li>
+          </ul>
+          <div className="grid grid-cols-2 gap-4 mt-4">
+            <img src={aibbcSite} alt="AIBBC Website" className="h-20 w-full rounded-lg object-cover shadow-md md:h-44 lg:h-60" />
+            <img src={aibbcEvent} alt="Event Management Integration" className="h-20 w-full rounded-lg object-cover shadow-md md:h-44 lg:h-60" />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Sept – Dec 2023",
+      content: (
+        <div>
+          <p className="mb-4 text-sm md:text-base text-neutral-800 dark:text-neutral-200 font-semibold">
+            Safety Intern – Safety Plus Kenya
+          </p>
+          <ul className="list-disc pl-5 space-y-2 text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
+            <li>Supported maintenance of internal systems and risk-tracking databases.</li>
+            <li>Digitized and managed audit records, implemented document automation, and supported system troubleshooting.</li>
+            <li>Contributed to structured backend data management and frontend tools for safety documentation.</li>
+          </ul>
+          <div className="grid grid-cols-2 gap-4 mt-4">
+            <img src={safetyPlusDatabase} alt="Database Management" className="h-20 w-full rounded-lg object-cover shadow-md md:h-44 lg:h-60" />
+            <img src={safetyPlusAudit} alt="Audit Record System" className="h-20 w-full rounded-lg object-cover shadow-md md:h-44 lg:h-60" />
+          </div>
+        </div>
+      ),
+    },
+  ];
+  
+  return (
+    <div className="relative w-full overflow-clip">
+      <Timeline data={data} />
+    </div>
+  );
 }
 
-export default SectionWrapper(Experience, "work")
+export default SectionWrapper(Works, "");
