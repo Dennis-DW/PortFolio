@@ -1,13 +1,13 @@
 import React from 'react';
 import { Button2 } from './button';
-import { ArrowRight, Search } from 'lucide-react';
+import { ShieldUser, Search } from 'lucide-react';
 import Writer from './typewriter-demo';
 
 
 export function HeroStart({
   description = 'Full Stack Developer skilled in JavaScript, TypeScript, React, Next.js, Node.js, blockchain technologies, and IT Support. Certified in Solidity Smart Contracts, Web3 Development, and Secure Coding Practices.',
   primaryButtonText = 'View My Work',
-  primaryButtonIcon = <ArrowRight size={20} />,
+  primaryButtonIcon = <ShieldUser size={30} />,
   showMockups = true,
   logoComponent,
 }) {

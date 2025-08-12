@@ -81,13 +81,13 @@ export const ProductCard = ({
             whileHover={{
                 y: -20,
             }}
-            className="group/product h-96 w-[30rem] relative flex-shrink-0">
+            className="group/product h-60 w-[30rem] relative flex-shrink-0">
             <a href={product.link} className="block group-hover/product:shadow-2xl ">
                 <img
                     src={product.thumbnail}
                     height="600"
                     width="600"
-                    className="object-cover object-left-top absolute h-full w-full inset-0"
+                    className="object-fill object-left-top absolute h-full w-full inset-0"
                     alt={product.title} />
             </a>
             <div

@@ -117,7 +117,7 @@ const SkeletonThree = () => {
     <motion.div
       initial="initial"
       animate="animate"
-      variants={variants} // Fixed: Changed 'vars' to 'variants'
+      variants={variants}
       transition={{
         duration: 5,
         repeat: Infinity,

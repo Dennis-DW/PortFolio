@@ -10,29 +10,28 @@ import {
   firebase,
   git,
   figma,
-  safetyplus,
-  station,
-  eth,
-  kejani,
-  template,
+  ainexus,
+  docs,
+  aibbc,
+  treasury,
   threejs,
+  nextjs,
+  wordpress,
+  postman
 } from "../assets";
 
 export const navLinks = [
   {
     id: 'about',
     title: 'About',
-    href: '#about',
   },
   {
     id: 'work',
     title: 'Work',
-    href: '#work',
   },
   {
     id: 'contact',
     title: 'Contact',
-    href: '#contact',
   },
 ];
 
@@ -85,23 +84,20 @@ export const technologies = [
     name: "Figma",
     icon: figma,
   },
+  {
+    name: "Postman",
+    icon: postman
+  },
+  {
+    name: "Nextjs",
+    icon: nextjs
+  },
+  {
+    name: "Wordpress",
+    icon: wordpress
+  }
 ];
 
-export const experiences = [
-  {
-    title: "Web Developer",
-    company_name: "Safety Plus",
-    icon: safetyplus,
-    iconBg: "#383E56",
-    date: "September 2023 - December 2023",
-    points: [
-      "Developed and maintained web applications using React.js and related technologies.",
-      "Collaborated with cross-functional teams, including designers, product managers, and developers, to create high-quality products.",
-      "Implemented responsive design and ensured cross-browser compatibility.",
-      "Participated in code reviews and provided constructive feedback to other developers.",
-    ],
-  },
-];
 
 
 export const testimonials = [
@@ -145,46 +141,46 @@ export const testimonials = [
 
 export const products = [
   {
-    title: "E-commerce Template",
-    link: "https://github.com/Dennis-DW/react_template-Design",
-    thumbnail: template,
+    title: "AI Nexus Marketplace",
+    link: "https://ai-nexus-marketplace.vercel.app/",
+    thumbnail: ainexus,
   },
   {
-    title: "Kejani Homes",
-    link: "https://github.com/Dennis-DW/Kejani-homes-Refine",
-    thumbnail: kejani,
+    title: "Treasury Movement Simulator",
+    link: "https://treasury-movement-simulator-one.vercel.app/",
+    thumbnail: treasury,
   },
   {
-    title: "E-commerce Template",
-    link: "https://github.com/Dennis-DW/react_template-Design",
-    thumbnail: template,
+    title: "AI Nexus Marketplace",
+    link: "https://ai-nexus-marketplace.vercel.app/",
+    thumbnail: ainexus,
   },
   {
-    title: "Ethereum Sender",
-    link: "https://github.com/Dennis-DW/web3.0_WambCrypt",
-    thumbnail: eth,
+    title: "AIBBC",
+    link: "https://aibbc.org",
+    thumbnail: aibbc,
   },
   {
-    title: "StationScout",
-    link: "https://github.com/Dennis-DW/StationScout",
-    thumbnail: station,
-  },
-
-  {
-    title: "Kejani Homes",
-    link: "https://github.com/Dennis-DW/Kejani-homes-Refine",
-    thumbnail: kejani,
-  },
-  {
-    title: "StationScout",
-    link: "https://github.com/Dennis-DW/StationScout",
-    thumbnail: station,
+    title: "Ainexus Docs",
+    link: "https://ai-nexus-marketplace.vercel.app/",
+    thumbnail: docs,
   },
 
   {
-    title: "Ethereum Sender",
-    link: "https://github.com/Dennis-DW/web3.0_WambCrypt",
-    thumbnail: eth,
+    title: "Treasury Movement Simulator",
+    link: "https://treasury-movement-simulator-one.vercel.app/",
+    thumbnail: treasury,
+  },
+  {
+    title: "Ainexus Docs",
+    link: "https://ai-nexus-marketplace.vercel.app/",
+    thumbnail: docs,
+  },
+
+  {
+    title: "AIBBC",
+    link: "https://aibbc.org",
+    thumbnail: aibbc,
   },
 
 ];

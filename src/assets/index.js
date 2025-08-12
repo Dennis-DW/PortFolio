@@ -17,6 +17,9 @@ import typescript from "./tech/typescript.png";
 import solidty from "./tech/solidty.png";
 import hardhat from "./tech/hardhat.png";
 import threejs from "./tech/threejs.svg";
+import nextjs from "./tech/nextjs.png";
+import postman from "./tech/postman.png";
+import wordpress from "./tech/wordpress.png";
 
 import grid1 from "./grid1.jpg";
 
@@ -24,12 +27,11 @@ import linkedin from "./linkedin.png";
 import instagram from "./instagram.svg";
 import twitter from "./twitter.svg";
 import github from "./github.svg";
-import  safetyplus from "./company/safetyplus.png";
 
-import station from "./station.png";
-import kejani from "./kejani.png";
-import eth from "./eth.png";
-import template from "./template.png"
+import aibbc from "./aibbc-site.png";
+import ainexus from "./ainexus-dashboard.png";
+import docs from "./ainexus-trading.png";
+import treasury from "./treasury.png"
 
 export {
   logo,
@@ -55,9 +57,11 @@ export {
   hardhat,
   typescript,
   threejs,
-  safetyplus,
-  station,
-  kejani,
-  eth,
-  template
+  nextjs,
+  postman,
+  wordpress,
+  ainexus,
+  docs,
+  treasury,
+  aibbc
 };

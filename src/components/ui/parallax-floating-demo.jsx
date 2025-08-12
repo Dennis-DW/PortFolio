@@ -24,7 +24,7 @@ const Preview = () => {
       ref={scope}
     >
       {/* Floating Elements */}
-      <Floating sensitivity={-1} className="overflow-visible h-[50vh] w-[210vh] z-20">
+      <Floating sensitivity={-1} className="overflow-visible h-[80vh] w-[210vh] z-20">
         {rasterTechnologies.map((technology, index) => {
           const top = 10 + ((index * 17) % 70);
           const left = 10 + ((index * 23) % 80);
@@ -47,14 +47,6 @@ const Preview = () => {
           );
         })}
       </Floating>
-      <motion.div
-        className="z-10 text-center space-y-4 items-center flex flex-col"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.88, delay: 1.5 }}
-      >
-     
-      </motion.div>
     </div>
   );
 };
