@@ -24,7 +24,7 @@ const Preview = () => {
       ref={scope}
     >
       {/* Floating Elements */}
-      <Floating sensitivity={-1} className="overflow-visible h-[80vh] w-[210vh] z-20">
+      <Floating sensitivity={-1} className="overflow-visible h-[70vh] w-[210vh] z-40">
         {rasterTechnologies.map((technology, index) => {
           const top = 10 + ((index * 17) % 70);
           const left = 10 + ((index * 23) % 80);

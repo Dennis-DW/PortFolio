@@ -17,7 +17,13 @@ import {
   threejs,
   nextjs,
   wordpress,
-  postman
+  postman,
+  json,
+  docker,
+  mysql,
+  vite,
+  linux,
+  graphql,
 } from "../assets";
 
 export const navLinks = [
@@ -41,12 +47,20 @@ export const technologies = [
     icon: html,
   },
   {
+    name: "MySQL",
+    icon: mysql,
+  },
+  {
     name: "CSS 3",
     icon: css,
   },
   {
     name: "JavaScript",
     icon: javascript,
+  },
+  {
+    name: "Vite",
+    icon: vite,
   },
   {
     name: "TypeScript",
@@ -65,6 +79,14 @@ export const technologies = [
     icon: nodejs,
   },
   {
+    name: "GrapQL",
+    icon: graphql,
+  },
+  {
+    name: "Json",
+    icon: json,
+  },
+  {
     name: "MongoDB",
     icon: mongodb,
   },
@@ -73,8 +95,16 @@ export const technologies = [
     icon: firebase,
   },
   {
+    name: "Docker",
+    icon: docker,
+  },
+  {
     name: "Three JS",
     icon: threejs,
+  },
+  {
+    name: "Linux",
+    icon: linux,
   },
   {
     name: "Git",

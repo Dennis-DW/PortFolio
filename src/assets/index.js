@@ -16,10 +16,16 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import solidty from "./tech/solidty.png";
 import hardhat from "./tech/hardhat.png";
-import threejs from "./tech/threejs.svg";
+import threejs from "./tech/threejs.png";
 import nextjs from "./tech/nextjs.png";
 import postman from "./tech/postman.png";
 import wordpress from "./tech/wordpress.png";
+import json from './tech/json.png';
+import vite from './tech/vite.png';
+import linux from './tech/linux.png';
+import docker from './tech/docker.png';
+import graphql from './tech/graphQL.png';
+import mysql from './tech/mysql.png';
 
 import grid1 from "./grid1.jpg";
 
@@ -60,6 +66,12 @@ export {
   nextjs,
   postman,
   wordpress,
+  json,
+  docker,
+  mysql,
+  vite,
+  linux,
+  graphql,
   ainexus,
   docs,
   treasury,
