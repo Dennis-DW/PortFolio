@@ -1,5 +1,5 @@
 "use client";
-import { useScroll, useTransform, motion } from "motion/react";
+import { useScroll, useTransform, motion, useInView } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 
 export const Timeline = ({ data }) => {
@@ -25,27 +25,60 @@ export const Timeline = ({ data }) => {
   return (
     <div className="w-full font-sans md:px-10" ref={containerRef}>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
-        {data.map((item, index) => (
-          <div key={index} className="flex justify-start pt-10 md:pt-40 md:gap-10">
-            {/* Sticky date column */}
-            <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
-              <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-card dark:bg-black flex items-center justify-center">
-                <div className="h-4 w-4 rounded-full bg-muted dark:bg-black-200 border border-border p-2" />
-              </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-black-200 dark:text-black-200">
-                {item.title}
-              </h3>
-            </div>
+        {data.map((item, index) => {
+          const itemRef = useRef(null);
+          const isInView = useInView(itemRef, { margin: "0px 0px -50% 0px" });
 
-            {/* Content */}
-            <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-black-200 dark:text-black-200">
-                {item.title}
-              </h3>
-              {item.content}
-            </div>
-          </div>
-        ))}
+          // Parallax effect for each timeline item
+          const parallaxY = useTransform(scrollYProgress, [0, 1], [50, -50]);
+
+          return (
+            <motion.div
+              key={index}
+              className="flex justify-start pt-10 md:pt-40 md:gap-10"
+              ref={itemRef}
+              style={{
+                y: parallaxY, // Apply parallax effect
+              }}
+            >
+              {/* Sticky date column */}
+              <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
+                <div
+                  className={`h-10 absolute left-3 md:left-3 w-10 rounded-full flex items-center justify-center ${
+                    isInView ? "bg-black" : "bg-gray-300 dark:bg-gray-700"
+                  }`}
+                >
+                  {/* Inner circle */}
+                  <div
+                    className={`h-6 w-6 rounded-full flex items-center justify-center ${
+                      isInView
+                        ? "bg-black border-black"
+                        : "bg-muted dark:bg-gray-500 border-border"
+                    }`}
+                  >
+                    {/* Smallest white circle */}
+                    <div
+                      className={`h-3 w-3 rounded-full ${
+                        isInView ? "bg-white" : "bg-gray-200 dark:bg-gray-600"
+                      }`}
+                    />
+                  </div>
+                </div>
+                <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-black-200 dark:text-black-200">
+                  {item.title}
+                </h3>
+              </div>
+
+              {/* Content */}
+              <div className="relative pl-20 pr-4 md:pl-4 w-full">
+                <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-black-200 dark:text-black-200">
+                  {item.title}
+                </h3>
+                {item.content}
+              </div>
+            </motion.div>
+          );
+        })}
 
         {/* Vertical line */}
         <div

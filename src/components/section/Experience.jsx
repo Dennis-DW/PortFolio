@@ -18,8 +18,12 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>My efforts up to now</p>
-        <h2 className={styles.sectionHeadText}>Work Experience.</h2>
+        <p className={`${styles.sectionSubText} text-lg text-gray-600`}>
+          My efforts up to now
+        </p>
+        <h2 className={`${styles.sectionHeadText} text-4xl font-extrabold text-gray-900 dark:text-white`}>
+          Work Experience.
+        </h2>
       </motion.div>
       <Work />
     </>
@@ -32,10 +36,10 @@ export function Work() {
       title: "May – Jun 2025",
       content: (
         <div>
-          <p className="mb-4 text-sm md:text-base text-neutral-800 dark:text-neutral-200 font-semibold">
+          <p className="mb-4 text-base md:text-lg text-gray-800 dark:text-gray-200 font-bold">
             Web Developer – AI Nexus Marketplace (Hackathon Submission)
           </p>
-          <ul className="list-disc pl-5 space-y-2 text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
+          <ul className="list-disc pl-5 space-y-2 text-sm md:text-base text-gray-700 dark:text-gray-300">
             <li>Built and submitted a decentralized AI trading platform for Bolt AI’s global hackathon.</li>
             <li>Stack included React, TypeScript, Node.js, Express, MongoDB, and Tailwind CSS.</li>
             <li>Integrated real-time analytics, secure smart contracts (Solidity), and wallet connectivity.</li>
@@ -51,10 +55,10 @@ export function Work() {
       title: "Jan – July 2024",
       content: (
         <div>
-          <p className="mb-4 text-sm md:text-base text-neutral-800 dark:text-neutral-200 font-semibold">
+          <p className="mb-4 text-base md:text-lg text-gray-800 dark:text-gray-200 font-bold">
             Full Stack Developer – Africa International Biotechnology and Biomedical Conference (AIBBC)
           </p>
-          <ul className="list-disc pl-5 space-y-2 text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
+          <ul className="list-disc pl-5 space-y-2 text-sm md:text-base text-gray-700 dark:text-gray-300">
             <li>Developed and maintained the official AIBBC website using WordPress with custom frontend enhancements.</li>
             <li>Integrated responsive layouts, accessibility improvements, APIs, and third-party tools for event management.</li>
             <li>Ongoing updates, performance optimization, and security maintenance.</li>
@@ -70,10 +74,10 @@ export function Work() {
       title: "Sept – Dec 2023",
       content: (
         <div>
-          <p className="mb-4 text-sm md:text-base text-neutral-800 dark:text-neutral-200 font-semibold">
+          <p className="mb-4 text-base md:text-lg text-gray-800 dark:text-gray-200 font-bold">
             Safety Intern – Safety Plus Kenya
           </p>
-          <ul className="list-disc pl-5 space-y-2 text-xs md:text-sm text-neutral-800 dark:text-neutral-200">
+          <ul className="list-disc pl-5 space-y-2 text-sm md:text-base text-gray-700 dark:text-gray-300">
             <li>Supported maintenance of internal systems and risk-tracking databases.</li>
             <li>Digitized and managed audit records, implemented document automation, and supported system troubleshooting.</li>
             <li>Contributed to structured backend data management and frontend tools for safety documentation.</li>

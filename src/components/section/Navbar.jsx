@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { styles } from "../../styles";
 import { navLinks } from "../../constants";
 import { logo, menu, close } from "../../assets";
@@ -8,10 +8,38 @@ import CV from "../../assets/cv/WambuaResume.pdf";
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 70;
+      const elementPosition = element.offsetTop;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const handleNavigation = (id) => {
+    if (location.pathname !== "/") {
+      // Navigate to the landing page first
+      navigate("/");
+      // Wait for the navigation to complete, then scroll to the section
+      setTimeout(() => handleScroll(id), 100); // Adjust timeout if necessary
+    } else {
+      // If already on the landing page, just scroll to the section
+      handleScroll(id);
+    }
+  };
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-2 fixed top-5 z-50  md:backdrop-blur-md rounded-full md:-left-32`}
+      className={`${styles.paddingX} w-full flex items-center py-2 fixed top-5 z-50 md:backdrop-blur-md rounded-full md:-left-32`}
       style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
@@ -34,29 +62,18 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <li
               key={link.id}
-              className={`${active === link.title ? "text-white" : "text-secondary"} cursor-pointer hover:text-white text-[18px] font-medium`}
+              className={`${
+                active === link.title ? "text-white" : "text-secondary"
+              } cursor-pointer hover:text-white text-[18px] font-medium`}
               onClick={() => {
                 setActive(link.title);
+                handleNavigation(link.id);
               }}
             >
               {link.id === "contact" ? (
                 <Link to="/contact">{link.title}</Link>
               ) : (
-                <a
-                  href={`#${link.id}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const element = document.getElementById(link.id);
-                    if (element) {
-                      window.scrollTo({
-                        top: element.offsetTop,
-                        behavior: "smooth",
-                      });
-                    }
-                  }}
-                >
-                  {link.title}
-                </a>
+                <a href={`#${link.id}`}>{link.title}</a>
               )}
             </li>
           ))}
@@ -83,36 +100,27 @@ const Navbar = () => {
 
           {/* Mobile Menu */}
           <div
-            className={`${toggle ? "flex" : "hidden"} p-6 black-gradient absolute top-20 right-10 mx-4 my-2 min-w-[140px] z-10 rounded-xl sm:hidden`}
+            className={`${
+              toggle ? "flex" : "hidden"
+            } p-6 black-gradient absolute top-20 right-10 mx-4 my-2 min-w-[140px] z-10 rounded-xl sm:hidden`}
           >
             <ul className="list-none flex flex-col gap-4">
               {navLinks.map((link) => (
                 <li
                   key={link.id}
-                  className={`${active === link.title ? "text-black-300" : "text-tertiary"} font-medium cursor-pointer hover:text-blue-200 text-[15px]`}
+                  className={`${
+                    active === link.title ? "text-black-300" : "text-tertiary"
+                  } font-medium cursor-pointer hover:text-blue-200 text-[15px]`}
                   onClick={() => {
                     setActive(link.title);
                     setToggle(false);
+                    handleNavigation(link.id);
                   }}
                 >
                   {link.id === "contact" ? (
                     <Link to="/contact">{link.title}</Link>
                   ) : (
-                    <a
-                      href={`#${link.id}`}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        const element = document.getElementById(link.id);
-                        if (element) {
-                          window.scrollTo({
-                            top: element.offsetTop,
-                            behavior: "smooth",
-                          });
-                        }
-                      }}
-                    >
-                      {link.title}
-                    </a>
+                    <a href={`#${link.id}`}>{link.title}</a>
                   )}
                 </li>
               ))}
