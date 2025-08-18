@@ -4,8 +4,8 @@ import { SectionWrapper } from "../../hoc";
 
 const Footer = () => {
   return (
-    <div className="mt-20">
-        <footer className="c-space pt-7 border-t border-white-100 border-double flex flex-col items-center gap-5">
+    <div className="reltive bottom-0 w-full">
+        <footer className="c-space pt-5 border-t border-white-100 border-double flex flex-col items-center gap-5">
           <div className="text-white-100 flex gap-2 text-sm">
             <p>Terms & Conditions</p>
             <p>|</p>

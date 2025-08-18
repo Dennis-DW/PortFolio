@@ -1,54 +1,48 @@
 "use client";
 
-import { useEffect } from "react";
-import { motion, stagger, useAnimate } from "motion/react";
-import Floating, { FloatingElement } from "../fancy/image/parallax-floating";
 import { technologies } from "../../constants";
 import { BallCanvas } from "../canvas";
-
+import { styles } from '../../styles'
 
 const rasterTechnologies = technologies.filter((t) =>
   typeof t.icon === "string" ? !t.icon.endsWith(".svg") : true
 );
 
-const Preview = () => {
-  const [scope, animate] = useAnimate();
-
-  useEffect(() => {
-    animate(".floating-element", { opacity: [0, 1] }, { duration: 0.5, delay: stagger(0.15) });
-  }, []);
-
+export default function IntegrationsSection() {
   return (
-    <div
-      className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden"
-      ref={scope}
+    <section className="max-w-7xl mx-auto my-20 px-6 grid md:grid-cols-2 gap-10 items-center border border-gray-200 dark:border-gray-700 p-6 rounded-3xl"
+      style={{
+        background: 'radial-gradient(ellipse 100% 90% at top right, #0b090a, #ffffff 120%)',
+      }}
     >
-      {/* Floating Elements */}
-      <Floating sensitivity={-1} className="overflow-visible h-[70vh] w-[210vh] z-40">
-        {rasterTechnologies.map((technology, index) => {
-          const top = 10 + ((index * 17) % 70);
-          const left = 10 + ((index * 23) % 80);
-          return (
-            <FloatingElement
-              key={technology.name}
-              depth={(index % 4) + 1}
-              className="floating-element"
-              style={{ top: `${top}%`, left: `${left}%` }}
-            >
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 + index * 0.05 }}
-                style={{ width: 96, height: 96 }}
-              >
-                <BallCanvas icon={technology.icon} />
-              </motion.div>
-            </FloatingElement>
-          );
-        })}
-      </Floating>
-    </div>
-  );
-};
+      {/* Left Side */}
+      <div>
+      <h2 className={styles.sectionSubText}>
+          Tools I Work With
+        </h2>
+        <p className={styles.sectionHeadText}>
+          Skills & Technologies
+        </p>
+       
+        <p className="text-primary dark:text-gray-300 mb-6">
+        A collection of programming languages, frameworks, and technologies that I leverage to craft modern, responsive, and scalable applications. These tools fuel my creativity and enable me to transform ideas into impactful digital solutions.
+        </p>
+      </div>
 
-export default Preview;
+      {/* Right Side */}
+      <div className="relative w-full min-h-[50vh] flex justify-center items-center overflow-hidden">
+        <div className="grid grid-cols-5 gap-2 max-w-[600px] w-full">
+          {rasterTechnologies.map((technology) => (
+            <div
+              key={technology.name}
+              className="flex justify-center items-center"
+              style={{ width: 72, height: 72 }}
+            >
+              <BallCanvas icon={technology.icon} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

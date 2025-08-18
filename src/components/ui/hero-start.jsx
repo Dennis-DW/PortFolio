@@ -11,10 +11,9 @@ export function HeroStart({
   showMockups = true,
   logoComponent,
 }) {
- 
-
   return (
-    <div className="min-h-screen bg-transparent py-12 sm:p-6 lg:p-8 flex flex-col-reverse lg:flex-row gap-6 lg:gap-12 items-center justify-center sm:justify-between max-w-7xl mx-auto">
+    <div className="min-h-screen bg-transparent py-12 sm:p-6 lg:p-8 flex flex-col-reverse lg:flex-row gap-6 lg:gap-12 items-center justify-center sm:justify-between max-w-7xl mx-auto relative">
+
       {/* Left Side */}
       <div className="space-y-4 max-w-full sm:max-w-2xl flex-1 w-full sm:w-auto">
         <div className="space-y-6 flex justify-center sm:justify-start mt-16 sm:mt-0 min-h-[100px] sm:min-h-[120px]">
@@ -24,15 +23,15 @@ export function HeroStart({
         <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed font-normal max-w-[90%] sm:max-w-lg mx-auto sm:mx-0 break-words">
           {description}
         </p>
-        <div className="space-y-6 flex justify-center sm:justify-start">          
-            <Button2
-              size="lg"
-              variant="default"
-              className="cursor-pointer text-base sm:text-lg font-semibold px-6 sm:px-8 py-4 sm:py-6 rounded-xl flex items-center gap-3 shadow-lg hover:shadow-xl transition-all duration-200"
-            >
-              {primaryButtonText}
-              {primaryButtonIcon}
-            </Button2>        
+        <div className="space-y-6 flex justify-center sm:justify-start">
+          <Button2
+            size="lg"
+            variant="default"
+            className="cursor-pointer text-base sm:text-lg font-semibold px-6 sm:px-8 py-4 sm:py-6 rounded-xl flex items-center gap-3 shadow-lg hover:shadow-xl transition-all duration-200"
+          >
+            {primaryButtonText}
+            {primaryButtonIcon}
+          </Button2>
         </div>
       </div>
 

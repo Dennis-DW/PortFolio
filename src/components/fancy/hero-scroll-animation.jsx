@@ -34,7 +34,7 @@ const Section2 = ({ scrollYProgress }) => {
       <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
       <article className="container mx-auto relative z-10">
         <About />
-      </article>
+        </article>
     </motion.section>
   );
 };
@@ -63,7 +63,7 @@ const HeroAnimation = forwardRef((props, ref) => {
           style={{
             background: 'radial-gradient(ellipse 100% 50% at top left, #0b090a, #ffffff 100%)',
           }}
-          className="text-foreground h-40 relative z-10 grid place-content-center text-2xl rounded-tr-full rounded-tl-full"
+          className="text-foreground h-44 relative z-40 grid place-content-center text-2xl rounded-tr-full rounded-tl-full"
         ></div>
       </div>
     </main>

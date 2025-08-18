@@ -9,7 +9,6 @@ import {
   mongodb,
   firebase,
   git,
-  figma,
   ainexus,
   docs,
   aibbc,
@@ -109,10 +108,6 @@ export const technologies = [
   {
     name: "Git",
     icon: git,
-  },
-  {
-    name: "Figma",
-    icon: figma,
   },
   {
     name: "Postman",

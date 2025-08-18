@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "../lib/utils";
 import React from "react";
-import { BentoGrid, BentoGridItem, Preview } from "..";
+import { BentoGrid, BentoGridItem } from "..";
 import { textVariant } from "../../utils/motion";
 import { styles } from "../../styles";
 import {
@@ -35,8 +35,7 @@ const About = () => {
         ))}
       </BentoGrid>
       <div className="hidden sm:block">
-      <Preview />
-    </div>
+      </div>
     </div>
   );
 };

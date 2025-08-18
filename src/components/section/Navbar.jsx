@@ -37,16 +37,27 @@ const Navbar = () => {
               className={`${active === link.title ? "text-white" : "text-secondary"} cursor-pointer hover:text-white text-[18px] font-medium`}
               onClick={() => {
                 setActive(link.title);
-                const element = document.getElementById(link.id);
-                if (element) {
-                  window.scrollTo({
-                    top: element.offsetTop,
-                    behavior: "smooth",
-                  });
-                }
               }}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              {link.id === "contact" ? (
+                <Link to="/contact">{link.title}</Link>
+              ) : (
+                <a
+                  href={`#${link.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.getElementById(link.id);
+                    if (element) {
+                      window.scrollTo({
+                        top: element.offsetTop,
+                        behavior: "smooth",
+                      });
+                    }
+                  }}
+                >
+                  {link.title}
+                </a>
+              )}
             </li>
           ))}
           <li>
@@ -82,16 +93,27 @@ const Navbar = () => {
                   onClick={() => {
                     setActive(link.title);
                     setToggle(false);
-                    const element = document.getElementById(link.id);
-                    if (element) {
-                      window.scrollTo({
-                        top: element.offsetTop,
-                        behavior: "smooth",
-                      });
-                    }
                   }}
                 >
-                  <a href={`#${link.id}`}>{link.title}</a>
+                  {link.id === "contact" ? (
+                    <Link to="/contact">{link.title}</Link>
+                  ) : (
+                    <a
+                      href={`#${link.id}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const element = document.getElementById(link.id);
+                        if (element) {
+                          window.scrollTo({
+                            top: element.offsetTop,
+                            behavior: "smooth",
+                          });
+                        }
+                      }}
+                    >
+                      {link.title}
+                    </a>
+                  )}
                 </li>
               ))}
               <li>
