@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { styles } from "../../styles";
 import { navLinks } from "../../constants";
@@ -11,6 +11,39 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Handle scroll to update active state
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 70; // Offset by navbar height (70px)
+      for (const link of navLinks) {
+        const element = document.getElementById(link.id);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetHeight = element.offsetHeight;
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
+            setActive(link.title);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleNavigation = (id) => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => handleScroll(id), 100);
+    } else {
+      handleScroll(id);
+    }
+  };
+
   const handleScroll = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -22,18 +55,6 @@ const Navbar = () => {
         top: offsetPosition,
         behavior: "smooth",
       });
-    }
-  };
-
-  const handleNavigation = (id) => {
-    if (location.pathname !== "/") {
-      // Navigate to the landing page first
-      navigate("/");
-      // Wait for the navigation to complete, then scroll to the section
-      setTimeout(() => handleScroll(id), 100); // Adjust timeout if necessary
-    } else {
-      // If already on the landing page, just scroll to the section
-      handleScroll(id);
     }
   };
 
@@ -63,8 +84,10 @@ const Navbar = () => {
             <li
               key={link.id}
               className={`${
-                active === link.title ? "text-white" : "text-secondary"
-              } cursor-pointer hover:text-white text-[18px] font-medium`}
+                active === link.title
+                  ? "text-white border-b-2 border-white"
+                  : "text-secondary hover:text-white"
+              } cursor-pointer text-[18px] font-medium pb-1`}
               onClick={() => {
                 setActive(link.title);
                 handleNavigation(link.id);
@@ -109,8 +132,10 @@ const Navbar = () => {
                 <li
                   key={link.id}
                   className={`${
-                    active === link.title ? "text-black-300" : "text-tertiary"
-                  } font-medium cursor-pointer hover:text-blue-200 text-[15px]`}
+                    active === link.title
+                      ? "text-black-300 border-b-2 border-black-300"
+                      : "text-tertiary hover:text-blue-200"
+                  } font-medium cursor-pointer text-[15px] pb-1`}
                   onClick={() => {
                     setActive(link.title);
                     setToggle(false);

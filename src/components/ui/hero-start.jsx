@@ -79,7 +79,7 @@ export function HeroStart({
               </div>
               <div className="space-y-6 sm:space-y-8">
                 <div className="space-y-3">
-                  <h3 className="text-muted-foreground font-medium text-sm sm:text-base">Quick Actions</h3>
+                  <h3 className="text-muted-foreground font-medium text-sm sm:text-base">My Calling</h3>
                   <div className="h-1.5 sm:h-2 bg-muted rounded-full overflow-hidden">
                     <div className="h-full bg-primary w-3/4 rounded-full"></div>
                   </div>

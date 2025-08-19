@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="reltive bottom-0 w-full">
         <footer className="c-space pt-5 border-t border-white-100 border-double flex flex-col items-center gap-5">
-          <div className="text-white-100 flex gap-2 text-sm">
+          <div className="text-white flex gap-2 text-sm">
             <p>Terms & Conditions</p>
             <p>|</p>
             <p className="text-blue-500">Privacy Policy</p>

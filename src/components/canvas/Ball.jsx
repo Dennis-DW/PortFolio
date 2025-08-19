@@ -5,8 +5,8 @@ import { Decal, Float, OrbitControls, Preload, useTexture } from '@react-three/d
 import CanvasLoader from '../ui/Loader';
 import * as THREE from 'three';
 
-const Ball = ({ imgUrl }) => {
-  const [decal] = useTexture([imgUrl]);
+const Ball = ({ icon }) => {
+  const [decal] = useTexture([icon]);
 
   const gradientTexture = useMemo(() => {
     const canvas = document.createElement('canvas');
@@ -26,34 +26,36 @@ const Ball = ({ imgUrl }) => {
 
   return (
     <Float rotationIntensity={0.6} speed={1.1} floatIntensity={1.4}>
-      <hemisphereLight intensity={0.5} groundColor={new THREE.Color('#222222')} />
-      <ambientLight intensity={1.0} />
-      <directionalLight position={[2, 3, 4]} intensity={1.2} />
-      <mesh castShadow receiveShadow scale={1.6}> 
-        <sphereGeometry args={[1, 16, 16]} />
+      <hemisphereLight intensity={0.6} groundColor={new THREE.Color('#333333')} />
+      <ambientLight intensity={0.8} />
+      <directionalLight position={[2, 3, 4]} intensity={1.5} />
+      <mesh castShadow receiveShadow scale={1.6}>
+        <sphereGeometry args={[1, 32, 32]} />
         <meshStandardMaterial
           map={gradientTexture}
-          metalness={0.1}
-          roughness={0.4}
+          metalness={0.2}
+          roughness={0.5}
           polygonOffset
           polygonOffsetFactor={-5}
           flatShading
         />
-        <Decal
-          position={[0, 0, 1]}
-          rotation={[2 * Math.PI, 0, 6.25]}
-          scale={1.0} 
-          map={decal}
-          transparent
-          flatShading
-        />
+        {decal && (
+          <Decal
+            position={[0, 0, 1]}
+            rotation={[2 * Math.PI, 0, 6.25]}
+            scale={1.0}
+            map={decal}
+            transparent
+            flatShading
+          />
+        )}
       </mesh>
     </Float>
   );
 };
 
 Ball.propTypes = {
-  imgUrl: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
 };
 
 const BallCanvas = ({ icon }) => {
@@ -66,7 +68,7 @@ const BallCanvas = ({ icon }) => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
-        <Ball imgUrl={icon} />
+        <Ball icon={icon} />
       </Suspense>
       <Preload all />
     </Canvas>

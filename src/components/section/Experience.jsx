@@ -18,10 +18,10 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-lg text-gray-600`}>
+        <p className={`${styles.sectionSubText}`}>
           My efforts up to now
         </p>
-        <h2 className={`${styles.sectionHeadText} text-4xl font-extrabold text-gray-900 dark:text-white`}>
+        <h2 className={`${styles.sectionHeadText}`}>
           Work Experience.
         </h2>
       </motion.div>

@@ -11,8 +11,9 @@ import {BentoGrid } from './ui/bento-grid'
 import {BentoGridItem} from './ui/bento-grid'
 import Footer from './section/Footer'
 import Writter from './ui/typewriter-demo'
-import IntegrationsSection from './ui/parallax-floating-demo';
+import Skills from './ui/skills';
 import {HeroStart} from './ui/hero-start'
+import ContactBackground  from './section/ContactBackground'
 
 export {
   Hero,
@@ -30,6 +31,7 @@ export {
   BentoGridItem,
   Footer,
   Writter,
-  IntegrationsSection,
-  HeroStart
+  Skills,
+  HeroStart,
+  ContactBackground
 }

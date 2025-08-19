@@ -4,7 +4,7 @@ import { styles } from "../../styles";
 import { SectionWrapper } from "../../hoc";
 import { fadeIn, textVariant } from "../../utils/motion";
 import { testimonials } from "../../constants";
-import { AnimatedTestimonials,Footer,IntegrationsSection } from "../../components"
+import { AnimatedTestimonials,Footer,Skills } from "../../components"
 
 
 const Feedbacks = () => {
@@ -17,7 +17,7 @@ const Feedbacks = () => {
         </motion.div>
       </div>
       <AnimatedTestimonials testimonials={testimonials} />
-      <IntegrationsSection/>
+      <Skills/>
       <Footer />
     </div>
   );
