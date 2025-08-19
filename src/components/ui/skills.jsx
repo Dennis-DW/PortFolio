@@ -16,7 +16,7 @@ export default function Skills() {
       <div>
         <h2 className={styles.sectionSubText}>Tools I Work With</h2>
         <p className={styles.sectionHeadText}>Skills & Technologies</p>
-        <p className="text-primary text-lg font-medium text-gray-50 tracking-tight">
+        <p className="text-primary text-lg font-medium text-violet-100 tracking-tight">
           A collection of programming languages, frameworks, and technologies that I leverage to craft modern, responsive, and scalable applications. These tools fuel my creativity and enable me to transform ideas into impactful digital solutions.
         </p>
       </div>
