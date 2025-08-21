@@ -28,6 +28,33 @@ export function HeroStart({
             size="lg"
             variant="default"
             className="cursor-pointer text-base sm:text-lg font-semibold px-6 sm:px-8 py-4 sm:py-6 rounded-xl flex items-center gap-3 shadow-lg hover:shadow-xl transition-all duration-200"
+            onClick={() => {
+              const target = document.getElementById('work');
+              if (target) {
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+                const startPosition = window.pageYOffset;
+                const distance = targetPosition - startPosition;
+                const duration = 4000;
+                let startTime = null;
+
+                const easeInOutQuad = (t) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+
+                const scroll = (currentTime) => {
+                  if (!startTime) startTime = currentTime;
+                  const timeElapsed = currentTime - startTime;
+                  const progress = Math.min(timeElapsed / duration, 1);
+                  const easeProgress = easeInOutQuad(progress);
+
+                  window.scrollTo(0, startPosition + distance * easeProgress);
+
+                  if (progress < 1) {
+                    requestAnimationFrame(scroll);
+                  }
+                };
+
+                requestAnimationFrame(scroll);
+              }
+            }}
           >
             {primaryButtonText}
             {primaryButtonIcon}
