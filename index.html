@@ -1,22 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dennis Wambua Kioko - Fullstack & Web3 Developer Portfolio</title>
-    <meta name="description" content="Welcome to Dennis Wambua Kioko's portfolio. Expert Fullstack Developer, Frontend Specialist, and Web3 Developer showcasing projects and skills." />
-    <meta name="keywords" content="Dennis Wambua Kioko, Fullstack Developer, Web3 Developer, Frontend Developer, portfolio, projects, blockchain, personal website" />
-    <meta name="author" content="Dennis Wambua Kioko" />
-    <!-- Open Graph tags for social media sharing -->
-    <meta property="og:title" content="Dennis Wambua Kioko - Fullstack & Web3 Developer Portfolio" />
-    <meta property="og:description" content="Explore the Fullstack, Frontend, and Web3 development work of Dennis Wambua Kioko." />
-    <meta property="og:image" content="/logo.png" />
-    <meta property="og:url" content="https://dennyswambua.online" />
-    <meta property="og:type" content="website" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/logo.png" alt="Dennis Wambua Logo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dennis Wambua Kioko - Fullstack & Web3 Developer in Nairobi, Kenya</title>
+  <meta name="description"
+    content="Dennis Wambua Kioko - Expert Fullstack Developer and Web3 Specialist based in Nairobi, Kenya. Offering cutting-edge web development, blockchain solutions, and responsive design services." />
+  <meta name="keywords"
+    content="Dennis Wambua Kioko, Fullstack Developer Nairobi, Web3 Developer Kenya, Frontend Developer Nairobi, blockchain developer Kenya, web development Nairobi, software engineer Kenya, React developer Nairobi, Node.js developer Kenya" />
+  <meta name="author" content="Dennis Wambua Kioko" />
+  <meta name="geo.placename" content="Nairobi, Kenya" />
+  <meta name="geo.region" content="KE-110" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://dennyswambua.online" />
+
+  <!-- Open Graph tags for social media sharing -->
+  <meta property="og:title" content="Dennis Wambua Kioko - Fullstack & Web3 Developer in Nairobi, Kenya" />
+  <meta property="og:description"
+    content="Expert Fullstack and Web3 Developer based in Nairobi offering cutting-edge web development and blockchain solutions." />
+  <meta property="og:image" content="https://dennyswambua.online/logo.png" />
+  <meta property="og:url" content="https://dennyswambua.online" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_KE" />
+
+  <!-- Preload critical resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <!-- Schema.org markup for breadcrumbs -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://dennyswambua.online"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Portfolio",
+        "item": "https://dennyswambua.online#projects"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Contact",
+        "item": "https://dennyswambua.online/contact"
+      }]
+    }
+  </script>
+
+  <script type="module" src="/src/main.jsx"></script>
+
+  <!-- Analytics script (example with Google Analytics) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+</body>
+
 </html>

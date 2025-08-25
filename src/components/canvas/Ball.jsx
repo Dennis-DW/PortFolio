@@ -6,7 +6,11 @@ import CanvasLoader from '../ui/Loader';
 import * as THREE from 'three';
 
 const Ball = ({ icon }) => {
-  const [decal] = useTexture([icon]);
+  const [decal] = useTexture([icon], (texture) => {
+    if (!texture) {
+      console.error(`Failed to load texture: ${icon}`);
+    }
+  });
 
   const gradientTexture = useMemo(() => {
     const canvas = document.createElement('canvas');
@@ -65,10 +69,15 @@ const BallCanvas = ({ icon }) => {
       gl={{ preserveDrawingBuffer: true, alpha: true }}
       camera={{ position: [0, 0, 5], fov: 45 }}
       style={{ background: 'transparent' }}
+      onCreated={({ gl }) => {
+        return () => {
+          gl.dispose(); // Dispose of the WebGL context
+        };
+      }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
-        <Ball icon={icon} />
+        <Ball icon={icon || '/logo.png'} />
       </Suspense>
       <Preload all />
     </Canvas>

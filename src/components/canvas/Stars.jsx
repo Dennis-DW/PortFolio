@@ -16,8 +16,8 @@ const Stars = (props) => {
   // Rotate the points over time for a dynamic effect
   useFrame((state, delta) => {
     const { mouse } = state;
-    ref.current.rotation.x -= delta / 10;
-    ref.current.rotation.y -= delta / 15;
+    ref.current.rotation.x -= delta / 20;
+    ref.current.rotation.y -= delta / 30;
     ref.current.rotation.x += mouse.y * delta * 0.05;
     ref.current.rotation.y += mouse.x * delta * 0.05;
   });
