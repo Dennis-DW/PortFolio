@@ -37,14 +37,14 @@ const Section2 = ({ scrollYProgress }) => {
         </article>
         <div    
       >
-        <h1 className="text-[15vw] translate-y-20 leading-[100%] uppercase font-semibold text-center text-gray_gradient transition-all ease-linear">
-        Experience.
+        <h1 className="text-[15vw] translate-y-16 leading-[100%] uppercase font-semibold text-center text-gray_gradient transition-all ease-linear hidden sm:block">
+        Experience
         </h1>
         <div
           style={{
             background: 'radial-gradient(ellipse 120% 80% at top left, #0b090a, #ffffff 120%)',
           }}
-          className="text-foreground h-44 relative z-40 grid place-content-center text-2xl rounded-tr-full rounded-tl-full"
+          className="text-foreground h-40 relative z-40 grid place-content-center text-2xl rounded-tr-full rounded-tl-full"
         ></div>
       </div>
     </motion.section>
