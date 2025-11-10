@@ -10,7 +10,6 @@ const LandingPage = () => {
       </div>
       <div className="relative z-0">
         <div className="relative z-10">
-          <div className="h-[150vh] sm:h-[100vh]"></div>
           <Experience />
           <Works />
           <Feedbacks />          

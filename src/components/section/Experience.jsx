@@ -1,10 +1,8 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import { Timeline } from "../ui/timeline";
-import { textVariant } from "../../utils/motion";
 import { SectionWrapper } from "../../hoc";
-import { styles } from "../../styles";
+
 
 // Import images
 import aibbcSite from "../../assets/aibbc-site.png";
@@ -17,14 +15,6 @@ import safetyPlusAudit from "../../assets/safetyplus-audit.jpeg";
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText}`}>
-          My efforts up to now
-        </p>
-        <h2 className={`${styles.sectionHeadText}`}>
-          Work Experience.
-        </h2>
-      </motion.div>
       <Work />
     </>
   );
@@ -32,6 +22,26 @@ const Works = () => {
 
 export function Work() {
   const data = [
+    {
+      title: "Jan 2024 – present",
+      content: (
+        <div>
+          <p className="mb-4 text-base md:text-lg text-gray-800 dark:text-gray-200 font-bold">
+            Full Stack Developer – Sowerved Tech
+          </p>
+          <ul className="list-disc pl-5 space-y-2 text-sm md:text-base text-gray-700 dark:text-gray-300">
+            <li>Managed and maintained 5+ client business applications (WordPress), optimizing performance by 25% through
+              custom API integrations.</li>
+            <li>Ensured effective application function by collaborating directly with users and stakeholders to translate business
+              requirements into technical specifications.</li>
+            <li>Optimized software deployment processes by implementing CI/CD pipelines (GitHub Actions, Docker), reducing
+              deployment time by 40% and enhancing system reliability.</li>
+            <li>Managed the full lifecycle of 3 full-stack software systems (Node.js/React), creating robust RESTful APIs and
+              ensuring effective application operations.</li>
+          </ul>
+         </div>
+      ),
+    },
     {
       title: "May – Jun 2025",
       content: (
@@ -90,7 +100,7 @@ export function Work() {
       ),
     },
   ];
-  
+
   return (
     <div className="relative w-full overflow-clip">
       <Timeline data={data} />

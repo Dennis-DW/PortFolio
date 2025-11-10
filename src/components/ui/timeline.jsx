@@ -35,7 +35,7 @@ export const Timeline = ({ data }) => {
           return (
             <motion.div
               key={index}
-              className="flex justify-start pt-10 md:pt-40 md:gap-10"
+              className="flex justify-start pt-10 md:pt-10 md:gap-10"
               ref={itemRef}
               style={{
                 y: parallaxY, // Apply parallax effect

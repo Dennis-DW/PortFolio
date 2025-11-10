@@ -29,12 +29,24 @@ const Section2 = ({ scrollYProgress }) => {
 
   return (
     <motion.section
-      className="relative h-[120vh] sm:h-[140vh] bg-primary text-foreground z-40"
+      className="relative bg-primary text-foreground z-40"
     >
       <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
       <article className="container mx-auto relative z-10">
         <About />
         </article>
+        <div    
+      >
+        <h1 className="text-[15vw] translate-y-20 leading-[100%] uppercase font-semibold text-center text-gray_gradient transition-all ease-linear">
+        Experience.
+        </h1>
+        <div
+          style={{
+            background: 'radial-gradient(ellipse 120% 80% at top left, #0b090a, #ffffff 120%)',
+          }}
+          className="text-foreground h-44 relative z-40 grid place-content-center text-2xl rounded-tr-full rounded-tl-full"
+        ></div>
+      </div>
     </motion.section>
   );
 };
@@ -47,25 +59,9 @@ const HeroAnimation = forwardRef((props, ref) => {
   });
 
   return (
-    <main ref={container} className="relative h-[200vh] bg-background z-30">
+    <main ref={container} className="relative bg-background z-30">
       <Section1 scrollYProgress={scrollYProgress} />
       <Section2 scrollYProgress={scrollYProgress} />
-      <div
-        style={{
-          background: 'radial-gradient(ellipse 600% 80% at top left, #0b090a, #ffffff 100%)',
-        }}
-        className="group hidden sm:block"
-      >
-        <h1 className="text-[16vw] translate-y-20 leading-[100%] uppercase font-semibold text-center text-gray_gradient transition-all ease-linear">
-          PORTFOLIO
-        </h1>
-        <div
-          style={{
-            background: 'radial-gradient(ellipse 100% 50% at top left, #0b090a, #ffffff 100%)',
-          }}
-          className="text-foreground h-44 relative z-40 grid place-content-center text-2xl rounded-tr-full rounded-tl-full"
-        ></div>
-      </div>
     </main>
   );
 });
