@@ -37,9 +37,9 @@ const Section2 = ({ scrollYProgress }) => {
         </article>
         <div    
       >
-        <h1 className="text-[15vw] translate-y-16 leading-[100%] uppercase font-semibold text-center text-gray_gradient transition-all ease-linear hidden sm:block">
+        <div className="text-[15vw] translate-y-16 leading-[100%] uppercase font-semibold text-center text-gray_gradient transition-all ease-linear hidden sm:block" role="heading" aria-level="2">
         Experience
-        </h1>
+        </div>
         <div
           style={{
             background: 'radial-gradient(ellipse 120% 80% at top left, #0b090a, #ffffff 120%)',

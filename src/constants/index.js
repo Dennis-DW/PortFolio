@@ -11,6 +11,8 @@ import {
   git,
   ainexus,
   docs,
+  sow,
+  scout,
   aibbc,
   treasury,
   threejs,
@@ -176,9 +178,9 @@ export const products = [
     thumbnail: treasury,
   },
   {
-    title: "AI Nexus Marketplace",
-    link: "https://ai-nexus-marketplace.vercel.app/",
-    thumbnail: ainexus,
+    title: "Sowerved tech",
+    link: "https://sowerved.tech/",
+    thumbnail: sow,
   },
   {
     title: "AIBBC",
@@ -197,15 +199,37 @@ export const products = [
     thumbnail: treasury,
   },
   {
+    title: "Station Scout",
+    link: "https://github.com/Dennis-DW/StationScout",
+    thumbnail: scout,
+  },
+
+  {
+    title: "AI Nexus Marketplace",
+    link: "https://ai-nexus-marketplace.vercel.app/",
+    thumbnail: ainexus,
+  },
+  {
     title: "Ainexus Docs",
     link: "https://ai-nexus-marketplace.vercel.app/",
     thumbnail: docs,
   },
 
   {
-    title: "AIBBC",
-    link: "https://aibbc.org",
-    thumbnail: aibbc,
+    title: "Treasury Movement Simulator",
+    link: "https://treasury-movement-simulator-one.vercel.app/",
+    thumbnail: treasury,
+  },
+  {
+    title: "Station Scout",
+    link: "https://github.com/Dennis-DW/StationScout",
+    thumbnail: scout,
   },
 
+  {
+    title: "AI Nexus Marketplace",
+    link: "https://ai-nexus-marketplace.vercel.app/",
+    thumbnail: ainexus,
+  },
+  
 ];

@@ -152,7 +152,7 @@ const SkeletonFour = () => {
       >
         <img
           src={grid1}
-          alt="avatar"
+          alt=""
           height="100"
           width="100"
           className="rounded-full h-10 w-10"
@@ -169,7 +169,7 @@ const SkeletonFour = () => {
       >
         <img
           src={grid1}
-          alt="avatar"
+          alt=""
           height="100"
           width="100"
           className="rounded-full h-10 w-10"
@@ -187,7 +187,7 @@ const SkeletonFour = () => {
       >
         <img
           src={grid1}
-          alt="avatar"
+          alt=""
           height="100"
           width="100"
           className="rounded-full h-10 w-10"
@@ -225,7 +225,7 @@ const SkeletonFive = () => {
       >
         <img
           src={grid1}
-          alt="avatar"
+          alt=""
           height="100"
           width="100"
           className="rounded-full h-10 w-10"
@@ -244,13 +244,12 @@ const SkeletonFive = () => {
     </motion.div>
   );
 };
-
 const items = [
   {
-    title: "Full Stack Web Development",
+    title: "Fullstack Development (React & Node.js)",
     description: (
       <span className="text-sm text-foreground">
-        Experienced in building scalable, responsive web applications using React and modern JavaScript frameworks.
+        Building scalable, end-to-end web applications using React for the frontend and Node.js for the backend.
       </span>
     ),
     header: <SkeletonOne />,
@@ -258,16 +257,21 @@ const items = [
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500 mb-2" />,
   },
   {
-    title: "Blockchain & Decentralized Applications",
+    title: "DevOps & CI/CD",
+    description: (
+      <span className="text-sm text-foreground">
+        Automating deployment pipelines with Docker and GitHub Actions to reduce deployment time by 40%.
+      </span>
+    ),
     header: <SkeletonTwo />,
     className: "md:col-span-1",
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500 mb-2" />,
   },
   {
-    title: "Commitment to Excellence",
+    title: "Web3 & dApp Frontends",
     description: (
       <span className="text-sm text-foreground">
-        Dedicated to writing clean, maintainable code and delivering high-quality software solutions on every project.
+        Building responsive user interfaces for decentralized applications and connecting them to smart contracts.
       </span>
     ),
     header: <SkeletonThree />,
@@ -275,13 +279,23 @@ const items = [
     icon: <IconSignature className="h-4 w-4 text-neutral-500 mb-2" />,
   },
   {
-    title: "Organized & Collaborative",
+    title: "API Integration & System Management",
+    description: (
+      <span className="text-sm text-foreground">
+        Managing 5+ client applications (WordPress) and building custom RESTful APIs.
+      </span>
+    ),
     header: <SkeletonFour />,
     className: "md:col-span-2",
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500 mb-2" />,
   },
   {
     title: "Creative Problem Solver",
+    description: (
+      <span className="text-sm text-foreground">
+        Translating complex business requirements and user needs into clean, functional, and maintainable code.
+      </span>
+    ),
     header: <SkeletonFive />,
     className: "md:col-span-1",
     icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500 mb-2" />,

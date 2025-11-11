@@ -9,11 +9,11 @@ export default function Writer() {
       </span>
       <Typewriter
         text={[
-          'craft scalable web applications',
-          'develop secure smart contracts',
-          'design beautiful UIs',
-          'integrate powerful APIs',
-          'bring ideas to life through code',
+          'build scalable full-stack applications',
+          'craft high-performance Node.js APIs',
+          'deploy systems with Docker & CI/CD',
+          'build responsive React UIs',
+          'and develop decentralized (dApp) frontends',
         ]}
         speed={70}
         className="text-xl sm:text-2xl lg:text-3xl text-chart-4 text-pretty leading-[1.1] tracking-tight"

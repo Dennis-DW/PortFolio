@@ -37,6 +37,8 @@ import aibbc from "./aibbc-site.png";
 import ainexus from "./ainexus-dashboard.png";
 import docs from "./ainexus-trading.png";
 import treasury from "./treasury.png"
+import sow from './sowerved.png';
+import scout from './scout.png';
 
 export {
   logo,
@@ -51,6 +53,8 @@ export {
   linkedin,
   git,
   html,
+  sow,
+  scout,
   javascript,
   mongodb,
   nodejs,
