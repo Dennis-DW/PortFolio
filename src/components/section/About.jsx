@@ -248,7 +248,7 @@ const items = [
   {
     title: "Fullstack Development (React & Node.js)",
     description: (
-      <span className="text-sm text-foreground">
+      <span className="text-sm text-foreground tracking-tight">
         Building scalable, end-to-end web applications using React for the frontend and Node.js for the backend.
       </span>
     ),
@@ -259,7 +259,7 @@ const items = [
   {
     title: "DevOps & CI/CD",
     description: (
-      <span className="text-sm text-foreground">
+      <span className="text-sm text-foreground tracking-tight">
         Automating deployment pipelines with Docker and GitHub Actions to reduce deployment time by 40%.
       </span>
     ),
@@ -270,7 +270,7 @@ const items = [
   {
     title: "Web3 & dApp Frontends",
     description: (
-      <span className="text-sm text-foreground">
+      <span className="text-sm text-foreground tracking-tight">
         Building responsive user interfaces for decentralized applications and connecting them to smart contracts.
       </span>
     ),
@@ -292,7 +292,7 @@ const items = [
   {
     title: "Creative Problem Solver",
     description: (
-      <span className="text-sm text-foreground">
+      <span className="text-sm text-foreground tracking-tight">
         Translating complex business requirements and user needs into clean, functional, and maintainable code.
       </span>
     ),

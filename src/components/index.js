@@ -1,4 +1,4 @@
-import { EarthCanvas, BallCanvas, StarsCanvas } from './canvas';
+import { EarthCanvas, Ball, StarsCanvas } from './canvas';
 import Hero from './section/Hero';
 import Navbar from './section/Navbar';
 import About from './section/About';
@@ -24,7 +24,7 @@ export {
   Feedbacks,
   Contact,
   EarthCanvas, 
-  BallCanvas, 
+  Ball, 
   StarsCanvas,
   AnimatedTestimonials,
   BentoGrid,

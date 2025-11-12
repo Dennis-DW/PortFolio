@@ -15,7 +15,7 @@ export function HeroStart({
     <div className="min-h-screen bg-transparent py-12 sm:p-6 lg:p-8 flex flex-col lg:flex-row gap-6 lg:gap-12 items-center justify-center sm:justify-between max-w-7xl mx-auto relative">
 
       {/* Left Side - Image */}
-      <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[400px] lg:h-[400px] flex-shrink-0 mt-7 sm:mt-4 lg:mt-0">
+      <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[400px] lg:h-[400px] flex-shrink-0 mt-7 sm:mt-4 lg:mt-0 -z-10 overflow-hidden">
         <img
           src={heroImage}
           alt="Dennis Wambua - Fullstack Developer (React, Node.js & Web3)"
