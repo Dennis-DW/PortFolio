@@ -6,7 +6,7 @@ import heroImage from '../../assets/dennis-wambua.png';
 
 
 export function HeroStart({
-  description = 'I build and maintain scalable web applications using React and Node.js. I have professional experience in managing full software lifecycles, creating robust APIs, and optimizing deployment pipelines with Docker and CI/CD.',
+  description = 'I build robust fullstack systems with React, Node.js, and CI/CD. I bridge the gap to analytics, using R and SQL to turn complex data into clear, strategic business solutions.',
   primaryButtonText = 'View My Work',
   primaryButtonIcon = <ShieldUser size={30} />,
   logoComponent,
@@ -18,7 +18,7 @@ export function HeroStart({
       <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[400px] lg:h-[400px] flex-shrink-0 mt-7 sm:mt-4 lg:mt-0 -z-10 overflow-hidden">
         <img
           src={heroImage}
-          alt="Dennis Wambua - Fullstack Developer (React, Node.js & Web3)"
+         alt="Dennis Wambua - Fullstack Developer (React, Node.js) & Data Analyst (R, SQL)"
           className="rounded-full object-cover w-full h-full shadow-2xl border-4 border-primary"
         />
       </div>
@@ -43,7 +43,7 @@ export function HeroStart({
                 const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
                 const startPosition = window.pageYOffset;
                 const distance = targetPosition - startPosition;
-              const duration = 1500; // Reduced for better UX
+                const duration = 1500; 
                 let startTime = null;
 
                 const easeInOutQuad = (t) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;

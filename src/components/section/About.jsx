@@ -158,10 +158,10 @@ const SkeletonFour = () => {
           className="rounded-full h-10 w-10"
         />
         <p className="sm:text-sm text-xs text-center font-semibold text-foreground mt-4">
-          Just code in Vanilla Javascript
+          Cleaning raw data with SQL
         </p>
         <p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Delusional
+          Analyst
         </p>
       </motion.div>
       <motion.div
@@ -175,10 +175,10 @@ const SkeletonFour = () => {
           className="rounded-full h-10 w-10"
         />
         <p className="sm:text-sm text-xs text-center font-semibold text-foreground mt-4">
-          Tailwind CSS is cool, you know
+          Building R Shiny Dashboards
         </p>
         <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Sensible
+          Visualizer
         </p>
       </motion.div>
       <motion.div
@@ -193,10 +193,10 @@ const SkeletonFour = () => {
           className="rounded-full h-10 w-10"
         />
         <p className="sm:text-sm text-xs text-center font-semibold text-foreground mt-4">
-          Coding isn&apos;t just my career—it&apos;s my true passion.
+          I build the apps AND analyze the data.
         </p>
         <p className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Helpless
+          Hybrid
         </p>
       </motion.div>
     </motion.div>
@@ -231,25 +231,26 @@ const SkeletonFive = () => {
           className="rounded-full h-10 w-10"
         />
         <p className="text-xs text-foreground">
-          With a computer science degree, I have enhanced my skills in frontend development and Web3, creating dynamic web applications.
+          With a CS degree and analytics experience, I bridge the gap between complex code and actionable business insights.
         </p>
       </motion.div>
       <motion.div
         variants={variantsSecond}
         className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-chart-2 dark:bg-chart-2"
       >
-        <p className="text-xs text-foreground">Use Javascript.</p>
+        <p className="text-xs text-foreground">Data + Dev.</p>
         <div className="h-4 w-4 rounded-full bg-gradient-to-r from-gray-500 via-green-500 to-black flex-shrink-0" />
       </motion.div>
     </motion.div>
   );
 };
+
 const items = [
   {
-    title: "Fullstack Development (React & Node.js)",
+    title: "Data Intelligence (R & SQL)",
     description: (
       <span className="text-sm text-foreground tracking-tight">
-        Building scalable, end-to-end web applications using React for the frontend and Node.js for the backend.
+        Unlocking business value by querying large datasets with SQL, building ETL pipelines, and visualizing trends using R Shiny and ggplot2.
       </span>
     ),
     header: <SkeletonOne />,
@@ -257,10 +258,10 @@ const items = [
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500 mb-2" />,
   },
   {
-    title: "DevOps & CI/CD",
+    title: "Fullstack Engineering",
     description: (
       <span className="text-sm text-foreground tracking-tight">
-        Automating deployment pipelines with Docker and GitHub Actions to reduce deployment time by 40%.
+        Building scalable React UIs and Node.js APIs. I treat data products with the same engineering rigor as production software.
       </span>
     ),
     header: <SkeletonTwo />,
@@ -268,10 +269,10 @@ const items = [
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500 mb-2" />,
   },
   {
-    title: "Web3 & dApp Frontends",
+    title: "Custom CMS & WordPress",
     description: (
       <span className="text-sm text-foreground tracking-tight">
-        Building responsive user interfaces for decentralized applications and connecting them to smart contracts.
+        Delivering production-ready content platforms. Expert in managing 5+ client sites, custom theme development, and SEO optimization.
       </span>
     ),
     header: <SkeletonThree />,
@@ -279,10 +280,10 @@ const items = [
     icon: <IconSignature className="h-4 w-4 text-neutral-500 mb-2" />,
   },
   {
-    title: "API Integration & System Management",
+    title: "The Hybrid Advantage",
     description: (
       <span className="text-sm text-foreground">
-        Managing 5+ client applications (WordPress) and building custom RESTful APIs.
+        Most analysts can't code apps; most developers can't analyze data. I do both to create end-to-end data solutions.
       </span>
     ),
     header: <SkeletonFour />,
@@ -290,10 +291,10 @@ const items = [
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500 mb-2" />,
   },
   {
-    title: "Creative Problem Solver",
+    title: "Technical Problem Solver",
     description: (
       <span className="text-sm text-foreground tracking-tight">
-        Translating complex business requirements and user needs into clean, functional, and maintainable code.
+        Whether it's optimizing a React hook or refining a SQL window function, I focus on performance, scalability, and clarity.
       </span>
     ),
     header: <SkeletonFive />,

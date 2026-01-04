@@ -58,10 +58,9 @@ export default function Skills() {
         <h2 className={styles.sectionSubText}>Tools I Work With</h2>
         <p className={styles.sectionHeadText}>Skills & Technologies</p>
         <p className=" text-lg font-medium text-violet-100/90 tracking-tight max-w-4xl mx-auto">
-          A collection of programming languages, frameworks, and technologies
-          that I leverage to craft modern, responsive, and scalable applications.
-          These tools fuel my creativity and enable me to transform ideas into
-          impactful digital solutions.
+          A versatile toolkit spanning <span className="text-[#915eff] font-bold">Software Engineering</span> and <span className="text-[#915eff] font-bold">Data Analytics</span>. 
+          I leverage <span className="font-semibold">React & Node.js</span> to build scalable applications, while using <span className="font-semibold">R, SQL, and Power BI</span> to drive business insights. 
+          From crafting interactive dashboards to engineering robust APIs, these technologies enable me to deliver end-to-end value.
         </p>
       </div>
 

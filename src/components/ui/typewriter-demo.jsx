@@ -10,10 +10,10 @@ export default function Writer() {
       <Typewriter
         text={[
           'build scalable full-stack applications',
-          'craft high-performance Node.js APIs',
-          'deploy systems with Docker & CI/CD',
-          'build responsive React UIs',
-          'and develop decentralized (dApp) frontends',
+          'build interactive R Shiny dashboards',
+          'develop scalable React & Node.js apps',
+          'engineer automated ETL pipelines',
+          'and craft custom WordPress solutions',
         ]}
         speed={70}
         className="text-xl sm:text-2xl lg:text-3xl text-chart-4 text-pretty leading-[1.1] tracking-tight"
